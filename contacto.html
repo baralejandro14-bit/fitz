@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0b0c">
+<title>Contacto | FITZ'S Tactical Details</title>
+<meta name="description" content="Pide tu cotización o cita con FITZ'S Tactical Details en El Paso, TX. Por WhatsApp o teléfono (904) 955-3342.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <span>📍 EL PASO, TX · FORT BLISS</span>
+  <span>VETERAN OWNED &amp; OPERATED</span>
+  <div class="social">
+    <a href="https://www.instagram.com/ftd_915" target="_blank" rel="noopener">IG</a>
+    <a href="https://www.tiktok.com/@915ftd" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://www.facebook.com/share/1MBXrbCwPK/" target="_blank" rel="noopener">FB</a>
+  </div>
+</div></div>
+
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html"><div class="seal">FTD</div><div class="brandname">FITZ'S <small>TACTICAL DETAILS</small></div></a>
+  <nav class="menu">
+    <a href="index.html">INICIO</a>
+    <a href="servicios.html">SERVICIOS</a>
+    <a href="paquetes.html">PAQUETES</a>
+    <a href="galeria.html">GALERÍA</a>
+    <a href="nosotros.html">NOSOTROS</a>
+    <a href="contacto.html" class="cta-mini active">COTIZA AQUÍ</a>
+  </nav>
+</div></header>
+
+<section class="page-head"><div class="wrap">
+  <div class="eyebrow">CONTACTO</div>
+  <h1>Pide tu cotización</h1>
+  <p>Cuéntanos de tu vehículo. Te confirmamos disponibilidad directamente.</p>
+</div></section>
+
+<section class="section">
+<div class="wrap contact">
+  <div class="info">
+    <h3>FITZ'S Tactical Details</h3>
+    <p>El Paso, Texas · Fort Bliss</p>
+    <p>Teléfono / WhatsApp: <a href="tel:+19049553342">(904) 955-3342</a></p>
+    <p><a class="btn wa" href="https://wa.me/19049553342?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">Abrir WhatsApp</a></p>
+    <p>Síguenos:
+      <a href="https://www.instagram.com/ftd_915" target="_blank" rel="noopener">Instagram</a> ·
+      <a href="https://www.tiktok.com/@915ftd" target="_blank" rel="noopener">TikTok</a> ·
+      <a href="https://www.facebook.com/share/1MBXrbCwPK/" target="_blank" rel="noopener">Facebook</a>
+    </p>
+  </div>
+
+  <form id="quote">
+    <div><label for="name">Tu nombre</label><input id="name" name="name" required></div>
+    <div><label for="phone">Teléfono (opcional)</label><input id="phone" name="phone" type="tel"></div>
+    <div><label for="vehicle">Vehículo (año, marca y modelo)</label><input id="vehicle" name="vehicle" required></div>
+    <div><label for="service">Servicio</label>
+      <select id="service" name="service">
+        <option>Paquete Recon</option>
+        <option>Paquete Execution</option>
+        <option>Paquete Command Reset</option>
+        <option>Corrección de pintura</option>
+        <option>Recubrimiento cerámico</option>
+        <option>Otro servicio de detallado</option>
+      </select>
+    </div>
+    <div><label for="notes">Detalles (opcional)</label><textarea id="notes" name="notes"></textarea></div>
+    <button class="btn red" type="submit">Enviar por WhatsApp »</button>
+    <p style="font-size:12px;color:#8c7a62;margin:0">Al enviar se abre WhatsApp con tu mensaje listo. Solo confirma y envíalo.</p>
+  </form>
+</div>
+</section>
+
+<footer><div class="wrap">
+  <div>
+    <h4>FITZ'S Tactical Details LLC</h4>
+    <p>El Paso, Texas · Fort Bliss</p>
+    <p><a href="tel:+19049553342" style="display:inline;padding:0">(904) 955-3342</a></p>
+  </div>
+  <div>
+    <h4>Sitio</h4>
+    <a href="servicios.html">Servicios</a><a href="paquetes.html">Paquetes</a><a href="galeria.html">Galería</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a>
+  </div>
+  <div>
+    <h4>Redes</h4>
+    <a href="https://www.instagram.com/ftd_915" target="_blank" rel="noopener">Instagram @ftd_915</a>
+    <a href="https://www.tiktok.com/@915ftd" target="_blank" rel="noopener">TikTok @915ftd</a>
+    <a href="https://www.facebook.com/share/1MBXrbCwPK/" target="_blank" rel="noopener">Facebook</a>
+  </div>
+</div>
+<div class="copy">© <span class="y"></span> FITZ'S Tactical Details LLC · El Paso, Texas</div>
+</footer>
+
+<a class="float" href="https://wa.me/19049553342" target="_blank" rel="noopener">✆ WhatsApp</a>
+
+<script>
+document.querySelector('.y').textContent=new Date().getFullYear();
+document.getElementById('quote').addEventListener('submit',function(e){
+  e.preventDefault();
+  const d=new FormData(this);
+  const msg="Hola FITZ'S Tactical Details, quiero una cotización.\n"+
+    "Nombre: "+d.get('name')+"\n"+
+    "Teléfono: "+(d.get('phone')||'-')+"\n"+
+    "Vehículo: "+d.get('vehicle')+"\n"+
+    "Servicio: "+d.get('service')+"\n"+
+    "Detalles: "+(d.get('notes')||'-');
+  window.open('https://wa.me/19049553342?text='+encodeURIComponent(msg),'_blank','noopener');
+});
+</script>
+</body>
+</html>
